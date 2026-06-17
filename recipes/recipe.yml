@@ -6,14 +6,14 @@ image-version: 44
 modules:
   - type: rpm-ostree
     repos:
-      - copr:ilyaz/LACT
+      - https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-%OS_VERSION%/ilyaz-LACT-fedora-%OS_VERSION%.repo
     install:
       - lact
       - mangohud
       - goverlay
       - ksystemlog
       - lutris
-      
+
   - type: default-flatpaks
     notify: true
     system:
