@@ -1,4 +1,4 @@
-name: Citrus-os
+name: citrus-os
 description: Mein massgeschneidertes Linux basierend auf Fedora Kinoite
 base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 44
