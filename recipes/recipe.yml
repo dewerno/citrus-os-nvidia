@@ -15,7 +15,6 @@ modules:
       - lutris
       - gnome-logs
       - plasma-discover
-      - packagekit-qt
       - file-roller
 
   - type: default-flatpaks@v1
