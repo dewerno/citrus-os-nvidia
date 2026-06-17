@@ -27,5 +27,5 @@ modules:
       install:
         - com.usebottles.bottles  
         - com.valvesoftware.Steam 
-    args:
-      - --filesystem=home
+      args:
+        - --filesystem=home
