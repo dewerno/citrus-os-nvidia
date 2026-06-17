@@ -1,23 +1,20 @@
-name: mein-gaming-os
+name: Citrus-os
 description: Mein massgeschneidertes Linux basierend auf Fedora Kinoite
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 44 # Die aktuelle Fedora-Version
+image-version: 44
 
 modules:
-  # 1. System-Pakete und COPR-Repositories hinzufügen
   - type: rpm-ostree
     repos:
-      # Fügt das offizielle Repository für LACT (dein Afterburner-Ersatz) hinzu
       - copr:ilyaz/LACT
     install:
-      - lact             # GPU Overclocking / Lüfterkurven
-      - mangohud         # Ingame Overlay (FPS, Temps)
-      - goverlay         # Grafische Oberfläche für MangoHud
-      - ksystemlog       # Grafische Ereignissanzeige für Abstürze
-      - abrt-desktop     # Polling für System-Abstürze
-      - lutris           # Alternativer Game-Manager
+      - lact            
+      - mangohud         
+      - goverlay         
+      - ksystemlog       
+      - abrt-desktop     
+      - lutris          
 
-  # 2. Flatpaks (Die sicheren "Apps" für deinen Store) vorinstallieren
   - type: default-flatpaks
     notify: true
     system:
@@ -25,5 +22,5 @@ modules:
       repo-name: flathub
       repo-title: "Flathub"
       install:
-        - com.usebottles.bottles  # Dein Wine-Manager
-        - com.valvesoftware.Steam # Steam
+        - com.usebottles.bottles  
+        - com.valvesoftware.Steam 
