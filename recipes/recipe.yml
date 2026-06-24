@@ -19,8 +19,7 @@ modules:
       - plasma-discover
       - file-roller
       - akmod-nvidia
-      - xorg-x11-drv-nvidia-cuda
-
+      
   - type: default-flatpaks@v1
     notify: true
     system:
