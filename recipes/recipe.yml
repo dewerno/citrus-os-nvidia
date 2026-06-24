@@ -10,16 +10,11 @@ modules:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     install:
+      - akmod-nvidia
       - lact
       - mangohud
       - goverlay
-      - ksystemlog
-      - lutris
-      - gnome-logs
-      - plasma-discover
-      - file-roller
-      - akmod-nvidia
-      
+
   - type: default-flatpaks@v1
     notify: true
     system:
@@ -27,7 +22,12 @@ modules:
       repo-name: flathub
       repo-title: "Flathub"
       install:
-        - com.usebottles.bottles  
-        - com.valvesoftware.Steam 
+        - com.usebottles.bottles
+        - com.valvesoftware.Steam
+        - net.lutris.Lutris
+        - org.gnome.Logs
+        - org.kde.ksystemlog
+        - org.kde.discover
+        - org.gnome.FileRoller
       args:
         - --filesystem=home
