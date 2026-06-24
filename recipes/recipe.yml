@@ -1,14 +1,11 @@
-name: citrus-os
-description: Mein massgeschneidertes Linux basierend auf Fedora Kinoite
-base-image: ghcr.io/ublue-os/kinoite-main
+name: citrus-os-nvidia
+description: Mein massgeschneidertes Linux fuer NVIDIA
+base-image: ghcr.io/ublue-os/kinoite-nvidia
 image-version: 44
 
 modules:
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-%OS_VERSION%/ilyaz-LACT-fedora-%OS_VERSION%.repo
     install:
-      - lact
       - mangohud
       - goverlay
       - ksystemlog
@@ -24,7 +21,9 @@ modules:
       repo-name: flathub
       repo-title: "Flathub"
       install:
-        - com.usebottles.bottles  
-        - com.valvesoftware.Steam 
+        - com.usebottles.bottles
+        - com.valvesoftware.Steam
+        - com.leinardi.gwe
       args:
         - --filesystem=home
+        - --filesystem=host
